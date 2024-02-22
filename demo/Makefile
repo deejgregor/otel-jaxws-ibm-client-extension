@@ -1,7 +1,7 @@
-TAG             = foo
+TAG             = otel-jaxws-ibm-client-extension-demo
 TARGET          = otel # base or otel
 PLATFORM        = linux/amd64
-CONTAINER_NAME  = was
+CONTAINER_NAME  = otel-jaxws-ibm-client-extension-demo
 CONTAINER_ID    = $(shell docker ps --filter name=$(CONTAINER_NAME) --format '{{.ID}}')
 
 .PHONY: default
