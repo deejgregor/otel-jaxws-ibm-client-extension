@@ -86,7 +86,7 @@ If you don't see traces, you can watch the console logs with `make -C demo tail`
 
 You can also look for `otel.javaagent` in the console logs:
 ```
-docker logs was | grep otel.javaagent
+docker logs otel-jaxws-ibm-client-extension-demo | grep otel.javaagent
 ```
 
 Lastly, you can edit the Dockerfile and uncomment `ENV OTEL_JAVAAGENT_DEBUG=true` near the end.
