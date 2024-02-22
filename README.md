@@ -59,7 +59,10 @@ You'll see this once the server is up and the demo page is accessed:
 Then visit http://localhost:9080/wssamplesei/demo and hit "Send Message".
 You should see some output in the server's log.
 And if you have an OTLP gRPC receiver running on `localhost:4317` then you should also see traces.
-If you used the default `One-Way Ping` on the page and  everything worked properly, you should see a `POST` server span, a `PingService.PingServicePort/pingOperation` client span (this is from this JAX-WS client instrumentation), and a `/WSSampleSei/PingService/PingService.PingServicePort/pingOperation` server span from the JAX-WS server.
+If you used the default `One-Way Ping` on the page and  everything worked properly, you should see a trace with three spans (or more, if you've enabled the controller telemetry option):
+1. A `POST` server span
+2. A `PingService.PingServicePort/pingOperation` client span (this is from this JAX-WS client instrumentation)
+3. A `/WSSampleSei/PingService/PingService.PingServicePort/pingOperation` server span from the JAX-WS server
 
 If you want to see what traces look like *without* the extension, comment out this line in the Dockerfile:
 ```
