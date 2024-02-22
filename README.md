@@ -64,6 +64,8 @@ If you used the default `One-Way Ping` on the page and  everything worked proper
 2. A `PingService.PingServicePort/pingOperation` client span (this is from this JAX-WS client instrumentation)
 3. A `/WSSampleSei/PingService/PingService.PingServicePort/pingOperation` server span from the JAX-WS server
 
+![Sample Trace](img/sample-trace.png)
+
 If you want to see what traces look like *without* the extension, comment out this line in the Dockerfile:
 ```
 ENV OTEL_JAVAAGENT_EXTENSIONS=/work/opentelemetry-java-instrumentation-jaxws-ibm-client-0.1-all.jar
